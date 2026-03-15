@@ -84,7 +84,7 @@
    DARK MODE
 ===================================================== */
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #020617;
     --color-bg-soft: #0f172a;
