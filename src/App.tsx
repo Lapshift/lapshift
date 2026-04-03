@@ -32,14 +32,14 @@ export default function App() {
           <div className="mt-8 flex items-center justify-center md:justify-start gap-4">
             <a
               href="https://lapshift.up.railway.app"
-              className="bg-blue-600 text-white px-2 md:px-6 py-3 rounded-lg font-normal md:font-semibold hover:bg-blue-700"
+              className="bg-blue-600 text-white px-3 md:px-6 py-3 rounded-lg font-normal md:font-semibold hover:bg-blue-700"
             >
               Get a Swap Quote
             </a>
 
             <a
               href="https://lapshift.up.railway.app"
-              className="border px-2 md:px-6 py-3 rounded-lg font-normal md:font-semibold hover:bg-gray-100"
+              className="border px-3 md:px-6 py-3 rounded-lg font-normal md:font-semibold hover:bg-gray-100"
             >
               Browse Bundles
             </a>
@@ -303,7 +303,7 @@ export default function App() {
       </section> */}
 
       {/* 5. FINAL CTA */}
-      <section className="py-32 px-6">
+      <section className="py-15 md:py-32 px-2 md:px-6">
         <div className="max-w-5xl mx-auto bg-blue-600 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 p-12 opacity-10">
             <Icon icon="lucide:cpu" width={200} />
