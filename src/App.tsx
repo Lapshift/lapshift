@@ -12,12 +12,12 @@ export default function App() {
     {
       icon: "mdi:star-four-points-outline",
       text: "Start From ₦31,000/Month",
-      pos: "top-[6%] left-2 sm:left-6 md:top-[18%] md:-left-6 lg:-left-12",
+      pos: "top-[6%] left-2 sm:left-6 md:top-[35%] md:-left-6 lg:-left-12",
     },
     {
       icon: "mdi:cog-outline",
       text: "Flexible Payments",
-      pos: "top-[48%] right-2 sm:right-6 md:top-[42%] md:right-0 lg:-right-10",
+      pos: "top-[48%] right-2 sm:right-6 md:top-[56%] md:right-0 lg:-right-10",
     },
     {
       icon: "mdi:snowflake",
@@ -34,8 +34,7 @@ export default function App() {
           {/* NAVBAR */}
           <nav className="bg-white/60 backdrop-blur-xl rounded-2xl md:rounded-full px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
             <div className="flex items-center gap-2 font-bold text-sky-600 shrink-0">
-              <span className="text-2xl">S</span>
-              <span className="text-sm sm:text-base">Shift</span>
+              <span className="text-2xl">Buysoftly</span>
             </div>
 
             <ul className="hidden lg:flex gap-8 text-sm text-slate-700">
@@ -60,7 +59,7 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pt-5 md:pt-10">
             {/* LEFT */}
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl sm:text-4xl font-extrabold leading-tight text-slate-950">
+              <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-slate-950">
                 Own Your Work <br />
                 Setup Without Paying <br />
                 <span className="text-blue-500">Everything Upfront</span>
@@ -79,7 +78,7 @@ export default function App() {
                 </button>
 
                 <button className="border border-blue-500 text-blue-500 hover:bg-blue-50 transition px-6 py-3 rounded-xl font-medium">
-                  <a className="block" href="#how-it-works">
+                  <a className="block" href="/#how-it-works">
                     How it works
                   </a>
                 </button>
