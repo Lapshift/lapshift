@@ -12,76 +12,93 @@ export default function App() {
     {
       icon: "mdi:star-four-points-outline",
       text: "Start From ₦31,000/Month",
-      pos: "top-[8%] md:top-[32%] md:-left-[15%]",
+      pos: "top-[6%] left-2 sm:left-6 md:top-[18%] md:-left-6 lg:-left-12",
     },
     {
       icon: "mdi:cog-outline",
       text: "Flexible Payments",
-      pos: "top-[48%] right-[5%] md:top-[44%] md:right-[30%]",
+      pos: "top-[48%] right-2 sm:right-6 md:top-[42%] md:right-0 lg:-right-10",
     },
     {
       icon: "mdi:snowflake",
       text: "No Hidden Fees",
-      pos: "bottom-[10%] left-[2%] md:bottom-[30%] md:-left-[2%]",
+      pos: "bottom-[8%] left-2 sm:left-6 md:bottom-[14%] md:left-0 lg:-left-8",
     },
   ];
 
   return (
     <>
       {/* HERO */}
-      <section className="min-h-screen bg-[url('/img/hero-bg.svg')] bg-center bg-cover relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <nav className="bg-white/50 backdrop-blur rounded-full px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2 font-bold text-sky-600">
-              <span className="text-2xl">Buysoftly</span>
+      <section className="min-h-screen bg-[url('/img/hero-bg.svg')] bg-cover bg-center relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          {/* NAVBAR */}
+          <nav className="bg-white/60 backdrop-blur-xl rounded-2xl md:rounded-full px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-2 font-bold text-sky-600 shrink-0">
+              <span className="text-2xl">S</span>
+              <span className="text-sm sm:text-base">Shift</span>
             </div>
-            <ul className="hidden md:flex gap-8 text-sm text-slate-700">
-              <li className="text-sky-600 font-medium">Home</li>
-              <li>About</li>
-              <li>How It Works</li>
-              <li>Plans</li>
-              <li>Contact Us</li>
+
+            <ul className="hidden lg:flex gap-8 text-sm text-slate-700">
+              <li className="text-sky-600 font-medium cursor-pointer">Home</li>
+              <li className="cursor-pointer">About</li>
+              <li className="cursor-pointer">How It Works</li>
+              <li className="cursor-pointer">Plans</li>
+              <li className="cursor-pointer">Contact Us</li>
             </ul>
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-xl text-sm font-medium">
+
+            <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm font-medium">
               Sign Up
             </button>
           </nav>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start pt-10 md:pt-14">
-            <div>
-              <h1 className="text-4xl sm:text-5xl md:text-5xl font-extrabold leading-tight text-slate-950 text-center md:text-left">
-                Own Your Work <br /> Setup Without Paying <br />
+          {/* HERO CONTENT */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pt-5 md:pt-10">
+            {/* LEFT */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-3xl sm:text-4xl xl:text-5xl font-extrabold leading-tight text-slate-950">
+                Own Your Work <br />
+                Setup Without Paying <br />
                 <span className="text-blue-500">Everything Upfront</span>
               </h1>
-              <p className="mt-5 text-slate-600 max-w-lg text-center md:text-left mx-auto md:mx-0">
+
+              <p className="mt-5 text-slate-600 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg">
                 Get laptops and accessories with flexible monthly payments.
                 Start building your dream workstation today.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <button className="bg-blue-500 text-white px-6 py-3 rounded-xl font-medium">
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <button className="bg-blue-500 hover:bg-blue-600 transition text-white px-6 py-3 rounded-xl font-medium">
                   Shop Now
                 </button>
-                <button className="border border-blue-500 text-blue-500 px-6 py-3 rounded-xl font-medium">
+
+                <button className="border border-blue-500 text-blue-500 hover:bg-blue-50 transition px-6 py-3 rounded-xl font-medium">
                   How it works
                 </button>
               </div>
             </div>
 
-            <div className="relative h-90 sm:h-110 md:h-130 md:mt-0">
+            {/* RIGHT */}
+            <div className="relative h-80 sm:h-90 md:h-100 lg:h-105">
+              {/* LAPTOP IMAGE */}
               <img
                 src={herLaptop}
-                className="absolute top-4 right-8 md:-top-30 md:right-20 sm:w-150 md:w-180 rounded-2xl"
+                alt="Laptop"
+                className="absolute inset-0 m-auto w-70 sm:w-95 md:w-125 lg:w-155 object-contain"
               />
 
+              {/* BADGES */}
               {badges.map((item, i) => (
                 <div
                   key={i}
-                  className={`absolute ${item.pos} flex text-xs md:text-sm bg-white rounded-xl shadow-lg px-4 py-3 items-center gap-2`}
+                  className={`absolute ${item.pos} bg-white rounded-xl shadow-xl px-3 sm:px-4 py-2 sm:py-3 flex items-center gap-2`}
                 >
-                  <span className="text-sky-500">
-                    <Icon icon={item.icon} width={20} />
-                  </span>
-                  <span className="text-xs font-medium text-slate-700">
+                  <Icon
+                    icon={item.icon}
+                    width={18}
+                    className="text-sky-500 shrink-0"
+                  />
+
+                  <span className="text-[11px] sm:text-xs font-medium text-slate-700 whitespace-nowrap">
                     {item.text}
                   </span>
                 </div>
